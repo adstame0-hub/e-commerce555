@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Send, BookOpen } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -10,17 +10,21 @@ const Footer: React.FC = () => {
           {/* Contact Info */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-                <BookOpen className="text-primary" size={24} />
+                <img 
+                  src="https://maternitybaby0.wordpress.com/wp-content/uploads/2025/12/re-book-logo.png" 
+                  alt="RE-BOOK Logo" 
+                  className="h-6 w-auto object-contain"
+                />
                 <h3 className="text-xl font-serif font-bold text-gray-800 tracking-wider">RE<span className="text-primary">BOOK</span></h3>
             </div>
             <div className="text-gray-500 text-sm space-y-4">
               <p>บริการ รับซื้อหนังสือมือสอง ทุกชนิด ครบวงจร ให้ราคาสูง จ่ายสดทันที</p>
-              <p>456 ถนนสุขุมวิท 71, แขวงพระโขนงเหนือ</p>
-              <p>เขตวัฒนา, กรุงเทพมหานคร 10110</p>
+              <p>GET IDEA 8 CO., LTD. 526/2 หมู่ที่ 10 ตำบลหนองหาร อำเภอสันทราย</p>
+              <p>เชียงใหม่ ประเทศไทย 50290</p>
               <p>info@rebookstore.com</p>
               <div className="mt-6">
                  <p className="mb-2">มีคำถาม? ปรึกษาเราได้ 24 ชม.</p>
-                 <p className="text-2xl text-primary font-bold">(+66) 081-BOOK-HELP</p>
+                 <p className="text-2xl text-primary font-bold">(+66) 081-REBOOK-MARKET</p>
               </div>
               <div className="flex space-x-4 mt-6">
                 <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
@@ -83,7 +87,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 RE-BOOK Store - ซื้อ-ขายหนังสือมือสองครบวงจร
+            © 2025 REBOOK.MARKET - ซื้อ-ขายหนังสือมือสอง ครบวงจร
           </p>
           <div className="flex space-x-4 opacity-50 grayscale">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" className="h-4" />

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Phone, Mail, Search, BookOpen, Heart, ShoppingBag, Menu, X, User } from 'lucide-react';
+import { Phone, Mail, Search, Heart, ShoppingBag, Menu, X, User } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,7 +45,11 @@ const Header: React.FC = () => {
               <div className="flex items-center gap-2">
                  <div className="text-3xl font-serif font-bold text-gray-800 tracking-wider flex items-center gap-2">
                   RE<span className="text-primary">BOOK</span>
-                  <BookOpen className="text-primary" size={28} />
+                  <img 
+                    src="https://maternitybaby0.wordpress.com/wp-content/uploads/2025/12/re-book-logo.png" 
+                    alt="RE-BOOK Logo" 
+                    className="h-8 w-auto object-contain"
+                  />
                  </div>
               </div>
             </div>
