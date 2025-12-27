@@ -46,7 +46,7 @@ const Header: React.FC = () => {
                  <div className="text-3xl font-serif font-bold text-gray-800 tracking-wider flex items-center gap-2">
                   RE<span className="text-primary">BOOK</span>
                   <img 
-                    src="https://raw.githubusercontent.com/adstame0-hub/e-commerce555/59b8dea502dc6fd3a883db74410f31d08d016cb0/RE%20BOOK-logo.png?token=GHSAT0AAAAAADQE62VRKPJYQJRH57P5XH6U2KPZDRA" 
+                    src="https://raw.githubusercontent.com/adstame0-hub/e-commerce555/59b8dea502dc6fd3a883db74410f31d08d016cb0/RE%20BOOK-logo.png?token=BXFWG3G56JXX2QDIFEHOD43JJ7KGE" 
                     alt="RE-BOOK Logo" 
                     className="h-8 w-auto object-contain"
                   />
