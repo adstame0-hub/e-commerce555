@@ -12,7 +12,7 @@ const BenefitSection: React.FC = () => {
     {
       icon: <Truck className="text-primary" size={32} />,
       title: "บริการรับซื้อถึงบ้าน (On-site Service)",
-      description: "หนังสือเป็นสินค้าที่มีน้ำหนักมาก หากคุณมีหนังสือเป็นร้อยๆ เล่ม การขนไปขายเองอาจจะไม่คุ้มค่าเหนื่อยและค่ารถ บริการรับซื้อ หนังสือมือสอง ยุคใหม่มักจะมีรถกระบะหรือรถขนส่งเข้าไปรับถึงหน้าบ้านคุณ"
+      description: "หนังสือเป็นสินค้าที่มีน้ำหนักมาก หากคุณมีหนังสือเป็นร้อยๆ เล่ม การขนไปขายเองอาจจะไม่คุ้มค่าเหนื่อยและค่ารถ บริการ รับซื้อหนังสือมือสอง ยุคใหม่มักจะมีรถกระบะหรือรถขนส่งเข้าไปรับถึงหน้าบ้านคุณ"
     },
     {
       icon: <Banknote className="text-primary" size={32} />,
@@ -49,7 +49,7 @@ const BenefitSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           <div className="col-span-1 md:col-span-2 mb-4">
             <p className="text-xl font-medium text-gray-800 text-center md:text-left border-l-4 border-primary pl-4">
-              การเลือกใช้บริการร้านที่ รับซื้อ หนังสือมือสอง ทุกชนิด จะช่วยตัดปัญหาเหล่านี้ทิ้งไปได้ทันที:
+              การเลือกใช้บริการร้านที่ รับซื้อหนังสือมือสอง ทุกชนิด จะช่วยตัดปัญหาเหล่านี้ทิ้งไปได้ทันที:
             </p>
           </div>
           

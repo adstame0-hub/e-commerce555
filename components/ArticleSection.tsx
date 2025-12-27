@@ -8,7 +8,7 @@ const ArticleSection: React.FC = () => {
         <div className="mb-10 text-center">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-800 leading-tight mb-6">
             อยากเปลี่ยนหนังสือในบ้านให้เป็นทุน <br/>
-            <span className="text-primary italic">ต้องเลือกบริการ รับซื้อ หนังสือมือสอง ทุกชนิด ที่เป็นมืออาชีพ</span>
+            <span className="text-primary italic">ต้องเลือกบริการ รับซื้อหนังสือมือสอง ทุกชนิด ที่เป็นมืออาชีพ</span>
           </h2>
           <div className="w-24 h-1.5 bg-primary mx-auto mb-8"></div>
         </div>
@@ -28,7 +28,7 @@ const ArticleSection: React.FC = () => {
           <div className="bg-light/40 p-8 rounded-2xl border-l-4 border-primary mb-8 shadow-sm">
             <p className="text-lg italic">
               หากคุณเริ่มรู้สึกว่าถึงเวลาแล้วที่จะต้องเคลียร์พื้นที่ และอยากจะส่งต่อความรู้เหล่านี้ให้คนอื่นได้อ่านต่อ 
-              พร้อมกับได้รับเงินกลับคืนมา คำถามสำคัญที่มักจะเกิดขึ้นคือ <span className="font-bold text-primary">"มีที่ไหนที่ รับซื้อ หนังสือมือสอง ทุกชนิด บ้าง?"</span> 
+              พร้อมกับได้รับเงินกลับคืนมา คำถามสำคัญที่มักจะเกิดขึ้นคือ <span className="font-bold text-primary">"มีที่ไหนที่ รับซื้อหนังสือมือสอง ทุกชนิด บ้าง?"</span> 
               เพราะคุณคงไม่อยากแบกหนังสือหนักๆ หลายกิโลกรัมไปเดินหาที่ขายทีละเล่ม 
               หรือต้องมานั่งโพสต์ขายทีละเล่มในกลุ่มเฟซบุ๊กที่ต้องรอนานกว่าจะมีคนมาซื้อ
             </p>

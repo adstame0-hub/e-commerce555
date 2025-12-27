@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
               <span className="font-light italic text-light">ให้เป็นทุนเล่มใหม่</span>
             </h1>
             <p className="text-xl md:text-2xl font-light mb-2">
-              รับซื้อ หนังสือมือสอง ทุกประเภท ให้ราคาสูง ยุติธรรม
+              รับซื้อหนังสือมือสอง ทุกประเภท ให้ราคาสูง ยุติธรรม
             </p>
             <p className="text-3xl md:text-5xl font-bold mb-8">
               เริ่มที่เล่มละ <span className="text-light">฿50 บาท</span>

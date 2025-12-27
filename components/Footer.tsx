@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
                 <h3 className="text-xl font-serif font-bold text-gray-800 tracking-wider">RE<span className="text-primary">BOOK</span></h3>
             </div>
             <div className="text-gray-500 text-sm space-y-4">
-              <p>บริการรับซื้อ หนังสือมือสอง ทุกชนิด ครบวงจร ให้ราคาสูง จ่ายสดทันที</p>
+              <p>บริการ รับซื้อหนังสือมือสอง ทุกชนิด ครบวงจร ให้ราคาสูง จ่ายสดทันที</p>
               <p>456 ถนนสุขุมวิท 71, แขวงพระโขนงเหนือ</p>
               <p>เขตวัฒนา, กรุงเทพมหานคร 10110</p>
               <p>info@rebookstore.com</p>
