@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
                 <img 
-                  src="https://raw.githubusercontent.com/adstame0-hub/e-commerce555/59b8dea502dc6fd3a883db74410f31d08d016cb0/RE%20BOOK-logo.png?token=BXFWG3G56JXX2QDIFEHOD43JJ7KGE" 
+                  src="https://raw.githubusercontent.com/adstame0-hub/e-commerce555/bb62b8a97c4e4637917e49a720770463c07a5acd/RE%20BOOK-logo.png" 
                   alt="RE-BOOK Logo" 
                   className="h-6 w-auto object-contain"
                 />
