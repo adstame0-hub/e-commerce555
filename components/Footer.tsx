@@ -1,8 +1,11 @@
 
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, MessageCircle, Phone, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const SELL_URL = "https://inlnk.co/frtCs";
+  const LINE_ID = "@887ujsyt";
+
   return (
     <footer className="bg-white pt-20 pb-10 border-t border-gray-100">
       <div className="container mx-auto px-4">
@@ -19,14 +22,41 @@ const Footer: React.FC = () => {
             </div>
             <div className="text-gray-500 text-sm space-y-4">
               <p>บริการ รับซื้อหนังสือมือสอง ทุกชนิด ครบวงจร ให้ราคาสูง จ่ายสดทันที</p>
-              <p>GET IDEA 8 CO., LTD. 526/2 หมู่ที่ 10 ตำบลหนองหาร อำเภอสันทราย</p>
-              <p>เชียงใหม่ ประเทศไทย 50290</p>
-              <p>info@rebookstore.com</p>
-              <div className="mt-6">
-                 <p className="mb-2">มีคำถาม? ปรึกษาเราได้ 24 ชม.</p>
-                 <p className="text-2xl text-primary font-bold">(+66) 081-REBOOK-MARKET</p>
+              
+              <div className="space-y-3 pt-2">
+                <div className="flex items-center gap-3">
+                  <Phone size={18} className="text-primary" />
+                  <span>(+66) 081-REBOOK-MARKET</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Mail size={18} className="text-primary" />
+                  <span>info@rebookstore.com</span>
+                </div>
+                {/* Line@ Section */}
+                <div className="flex items-center gap-3 group">
+                  <div className="bg-[#06C755] p-1.5 rounded-lg text-white">
+                    <MessageCircle size={18} fill="currentColor" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs font-bold text-gray-400 uppercase">Line Official</span>
+                    <a href={SELL_URL} className="text-lg font-bold text-[#06C755] hover:underline">
+                      {LINE_ID}
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="flex space-x-4 mt-6">
+
+              <div className="pt-4">
+                <a 
+                  href={SELL_URL}
+                  className="inline-flex items-center gap-2 bg-[#06C755] hover:bg-[#05b34c] text-white px-6 py-2 rounded-full font-bold transition-all transform hover:scale-105 shadow-md"
+                >
+                  <MessageCircle size={18} />
+                  เพิ่มเพื่อนประเมินราคา
+                </a>
+              </div>
+
+              <div className="flex space-x-4 mt-8">
                 <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
                     <Facebook size={18} />
                 </a>
@@ -58,7 +88,7 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-bold text-gray-800 uppercase tracking-wider mb-6">บริการของเรา</h3>
             <ul className="text-gray-500 text-sm space-y-3">
               <li><a href="#" className="hover:text-primary transition-colors">ขั้นตอนการขายหนังสือ</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">ประเมินราคาผ่านไลน์</a></li>
+              <li><a href={SELL_URL} className="hover:text-primary transition-colors">ประเมินราคาผ่านไลน์</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">พื้นที่ให้บริการรับถึงบ้าน</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">คำถามที่พบบ่อย (FAQ)</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">นโยบายความเป็นส่วนตัว</a></li>
@@ -96,6 +126,18 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Floating Line Button for Mobile/Desktop convenience */}
+      <a 
+        href={SELL_URL}
+        className="fixed bottom-6 right-6 z-[60] bg-[#06C755] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group"
+        aria-label="Contact on Line"
+      >
+        <MessageCircle size={28} />
+        <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-500 whitespace-nowrap font-bold">
+          ประเมินราคาทาง Line
+        </span>
+      </a>
     </footer>
   );
 };
