@@ -10,6 +10,8 @@ interface ProductSectionProps {
 }
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
+  const SELL_URL = "https://inlnk.co/frtCs";
+
   return (
     <div className="bg-white group rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full">
       <div className="relative overflow-hidden aspect-square">
@@ -60,10 +62,13 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
       </div>
       
       {/* Button always visible on mobile, visible on group hover on desktop or styled as full width */}
-      <button className="w-full bg-primary hover:bg-secondary text-white font-bold py-3 text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-colors">
+      <a 
+        href={SELL_URL}
+        className="w-full bg-primary hover:bg-secondary text-white font-bold py-3 text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
+      >
         <Tag size={16} />
         ลงขายสินค้า
-      </button>
+      </a>
     </div>
   );
 };

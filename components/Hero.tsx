@@ -2,6 +2,8 @@
 import React from 'react';
 
 const Hero: React.FC = () => {
+  const SELL_URL = "https://inlnk.co/frtCs";
+
   return (
     <section className="relative w-full h-[500px] md:h-[650px] overflow-hidden bg-gray-100">
       {/* Background Image - Scholarly/Bookstore feel */}
@@ -33,12 +35,18 @@ const Hero: React.FC = () => {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <button className="bg-primary hover:bg-secondary text-white text-sm md:text-base font-bold py-4 px-8 md:px-12 rounded-sm uppercase tracking-widest transition-all duration-300 transform hover:-translate-y-1 shadow-lg">
+              <a 
+                href={SELL_URL} 
+                className="bg-primary hover:bg-secondary text-white text-sm md:text-base font-bold py-4 px-8 md:px-12 rounded-sm uppercase tracking-widest transition-all duration-300 transform hover:-translate-y-1 shadow-lg inline-block text-center"
+              >
                 ประเมินราคาฟรี (Sell to Us)
-              </button>
-              <button className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white text-sm md:text-base font-bold py-4 px-8 md:px-12 rounded-sm uppercase tracking-widest transition-all duration-300">
+              </a>
+              <a 
+                href={SELL_URL} 
+                className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white text-sm md:text-base font-bold py-4 px-8 md:px-12 rounded-sm uppercase tracking-widest transition-all duration-300 inline-block text-center"
+              >
                 ลงขายหนังสือ
-              </button>
+              </a>
             </div>
           </div>
         </div>

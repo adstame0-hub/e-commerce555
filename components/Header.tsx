@@ -4,6 +4,7 @@ import { Phone, Mail, Search, Heart, ShoppingBag, Menu, X, User } from 'lucide-r
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const SELL_URL = "https://inlnk.co/frtCs";
 
   return (
     <header className="w-full relative z-50">
@@ -21,7 +22,7 @@ const Header: React.FC = () => {
             </div>
           </div>
           <div className="flex items-center space-x-6">
-            <span className="font-medium">รับซื้อหนังสือถึงบ้าน! <a href="#" className="underline text-white ml-1">เช็คราคาฟรีทาง Line!</a></span>
+            <span className="font-medium">รับซื้อหนังสือถึงบ้าน! <a href={SELL_URL} className="underline text-white ml-1">เช็คราคาฟรีทาง Line!</a></span>
             <div className="flex items-center space-x-4">
               <span>TH | EN</span>
               <div className="flex items-center cursor-pointer hover:text-white transition-colors">
@@ -61,7 +62,7 @@ const Header: React.FC = () => {
               <a href="#" className="hover:text-primary transition-colors">หนังสือเรียน</a>
               <a href="#" className="hover:text-primary transition-colors">ภาษา</a>
               <a href="#" className="hover:text-primary transition-colors">ของสะสม</a>
-              <a href="#" className="hover:text-primary transition-colors text-primary border-b-2 border-primary">ขายหนังสือ</a>
+              <a href={SELL_URL} className="hover:text-primary transition-colors text-primary border-b-2 border-primary">ขายหนังสือ</a>
             </nav>
 
             {/* Icons */}
@@ -86,7 +87,7 @@ const Header: React.FC = () => {
             <a href="#" className="text-gray-800 font-medium">หมวดหมู่การ์ตูน</a>
             <a href="#" className="text-gray-800 font-medium">หนังสือเรียน & สอบ</a>
             <a href="#" className="text-gray-800 font-medium">บทความ</a>
-            <a href="#" className="text-primary font-bold text-lg">ส่งรูปประเมินราคา (Line)</a>
+            <a href={SELL_URL} className="text-primary font-bold text-lg">ส่งรูปประเมินราคา (Line)</a>
           </div>
         )}
       </div>
