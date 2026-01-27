@@ -82,7 +82,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({ title, products, bgColo
           <div className="w-16 h-1 bg-primary mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 reveal-stagger">
           {products.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}

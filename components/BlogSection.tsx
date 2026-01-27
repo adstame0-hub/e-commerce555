@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { BlogPost } from '../types';
 import { X, Calendar, User, Clock, ChevronRight } from 'lucide-react';
@@ -39,6 +40,7 @@ const posts: BlogPost[] = [
 
 const BlogSection: React.FC = () => {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+  const SELL_URL = "https://inlnk.co/frtCs";
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -58,7 +60,7 @@ const BlogSection: React.FC = () => {
           <div className="w-16 h-1 bg-primary mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal-stagger">
           {posts.map((post) => (
             <div 
               key={post.id} 
@@ -150,9 +152,14 @@ const BlogSection: React.FC = () => {
                   <div className="bg-light p-6 rounded-xl border border-primary/10 w-full">
                     <h4 className="font-bold text-gray-800 mb-2">สนใจขายหนังสือกับเรา?</h4>
                     <p className="text-sm text-gray-600 mb-4">ถ่ายรูปส่งมาให้เราประเมินราคาเบื้องต้นได้ทันที ให้ราคาสูง จ่ายสด</p>
-                    <button className="bg-primary text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-secondary transition-colors">
-                      แอดไลน์ @REBOOK
-                    </button>
+                    <a 
+                      href={SELL_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-primary text-white px-8 py-3 rounded-full text-sm font-bold hover:bg-secondary transition-all transform hover:scale-105 shadow-lg inline-block"
+                    >
+                      แอดไลน์ @887ujsyt
+                    </a>
                   </div>
                 </div>
               </div>

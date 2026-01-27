@@ -19,22 +19,22 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="absolute inset-0 flex items-center">
         <div className="container mx-auto px-4 md:px-8 text-white">
-          <div className="max-w-2xl animate-fade-in-up">
-            <span className="block text-sm md:text-base tracking-[0.2em] uppercase mb-4 text-accent font-bold">
+          <div className="max-w-2xl">
+            <span className="block text-sm md:text-base tracking-[0.2em] uppercase mb-4 text-accent font-bold animate-fade-in-right">
               Professional Book Buyback Service
             </span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               เปลี่ยนหนังสือเก่า <br />
               <span className="font-light italic text-light">ให้เป็นทุนเล่มใหม่</span>
             </h1>
-            <p className="text-xl md:text-2xl font-light mb-2">
+            <p className="text-xl md:text-2xl font-light mb-2 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               รับซื้อหนังสือมือสอง ทุกประเภท ให้ราคาสูง ยุติธรรม
             </p>
-            <p className="text-3xl md:text-5xl font-bold mb-8">
+            <p className="text-3xl md:text-5xl font-bold mb-8 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
               เริ่มที่เล่มละ <span className="text-light">฿50 บาท</span>
             </p>
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
               <a 
                 href={SELL_URL} 
                 className="bg-primary hover:bg-secondary text-white text-sm md:text-base font-bold py-4 px-8 md:px-12 rounded-sm uppercase tracking-widest transition-all duration-300 transform hover:-translate-y-1 shadow-lg inline-block text-center"
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Decoration */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 animate-pulse">
         <span className="w-8 h-2 bg-primary rounded-full cursor-pointer"></span>
         <span className="w-2 h-2 bg-white rounded-full cursor-pointer opacity-50 hover:opacity-100"></span>
         <span className="w-2 h-2 bg-white rounded-full cursor-pointer opacity-50 hover:opacity-100"></span>

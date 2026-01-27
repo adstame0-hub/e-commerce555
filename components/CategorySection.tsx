@@ -21,7 +21,7 @@ const CategorySection: React.FC = () => {
           <p className="mt-4 text-gray-500 max-w-lg mx-auto">เรารับซื้อหนังสือหลากหลายประเภท สภาพดี-พอใช้ ยินดีตีราคาให้ทุกเล่ม</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 reveal-stagger">
           {categories.map((cat) => (
             <div key={cat.id} className="group cursor-pointer flex flex-col items-center">
               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden shadow-md mb-4 border-4 border-white group-hover:border-primary transition-all duration-300">

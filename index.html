@@ -2,13 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFQHJTFFV2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-RFQHJTFFV2');
     </script>
     <meta charset="UTF-8" />
@@ -40,6 +39,25 @@
             fontFamily: {
               serif: ['"Playfair Display"', 'serif'],
               sans: ['"Lato"', 'sans-serif'],
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'fade-in-right': 'fadeInRight 0.8s ease-out forwards',
+              'scale-in': 'scaleIn 0.5s ease-out forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeInRight: {
+                '0%': { opacity: '0', transform: 'translateX(-30px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              scaleIn: {
+                '0%': { opacity: '0', transform: 'scale(0.9)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              }
             }
           }
         }
@@ -49,10 +67,42 @@
       body {
         font-family: 'Lato', sans-serif;
         background-color: #ffffff;
+        overflow-x: hidden;
       }
       h1, h2, h3, h4, h5, h6, .brand-font {
         font-family: 'Playfair Display', serif;
       }
+      
+      /* Scroll Reveal Classes */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .reveal-stagger > * {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1);
+      }
+      .reveal-stagger.active > * {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Generate staggered delays for up to 12 items */
+      .reveal-stagger.active > *:nth-child(1) { transition-delay: 0.1s; }
+      .reveal-stagger.active > *:nth-child(2) { transition-delay: 0.2s; }
+      .reveal-stagger.active > *:nth-child(3) { transition-delay: 0.3s; }
+      .reveal-stagger.active > *:nth-child(4) { transition-delay: 0.4s; }
+      .reveal-stagger.active > *:nth-child(5) { transition-delay: 0.5s; }
+      .reveal-stagger.active > *:nth-child(6) { transition-delay: 0.6s; }
+      .reveal-stagger.active > *:nth-child(7) { transition-delay: 0.7s; }
+      .reveal-stagger.active > *:nth-child(8) { transition-delay: 0.8s; }
     </style>
   <script type="importmap">
 {

@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import CategorySection from './components/CategorySection';
@@ -95,25 +95,46 @@ const newArrivals: Product[] = [
 ];
 
 const App: React.FC = () => {
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1,
+    };
+
+    const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, observerOptions);
+    const elements = document.querySelectorAll('.reveal, .reveal-stagger');
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="min-h-screen font-sans text-gray-700 bg-[#fdfdfd]">
       <Header />
       <Hero />
-      <CategorySection />
-      <ArticleSection />
-      <ProductSection title="หนังสือแนะนำ / ของสะสม" products={featuredBooks} />
-      <ProductSection title="หนังสือเข้าใหม่วันนี้" products={newArrivals} bgColor="bg-gray-50" />
-      <BannerSection />
+      <div className="reveal"><CategorySection /></div>
+      <div className="reveal"><ArticleSection /></div>
+      <div className="reveal"><ProductSection title="หนังสือแนะนำ / ของสะสม" products={featuredBooks} /></div>
+      <div className="reveal"><ProductSection title="หนังสือเข้าใหม่วันนี้" products={newArrivals} bgColor="bg-gray-50" /></div>
+      <div className="reveal"><BannerSection /></div>
       
-      {/* ส่วนบทความใหม่ที่เพิ่มเข้ามาตามคำขอ */}
-      <BenefitSection />
+      <div className="reveal"><BenefitSection /></div>
 
-      <ProductSection title="สินค้ายอดนิยม (Best Sellers)" products={featuredBooks} />
-      <FeaturesSection />
-      <Testimonials />
+      <div className="reveal"><ProductSection title="สินค้ายอดนิยม (Best Sellers)" products={featuredBooks} /></div>
+      <div className="reveal"><FeaturesSection /></div>
+      <div className="reveal"><Testimonials /></div>
       
       {/* Brand Partners - Publishing Houses */}
-      <div className="py-12 bg-white border-t border-b border-gray-100">
+      <div className="py-12 bg-white border-t border-b border-gray-100 reveal">
         <div className="container mx-auto px-4 flex justify-between items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-500 overflow-x-auto gap-12 text-center">
            <div className="text-xl font-serif font-bold whitespace-nowrap">JAMSai</div>
            <div className="text-xl font-serif font-bold whitespace-nowrap">SIAM INTER COMICS</div>
@@ -123,7 +144,7 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      <BlogSection />
+      <div className="reveal"><BlogSection /></div>
       <Footer />
     </div>
   );
