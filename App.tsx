@@ -1,17 +1,26 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import CategorySection from './components/CategorySection';
 import ArticleSection from './components/ArticleSection';
 import ProductSection from './components/ProductSection';
+import PriceTableSection from './components/PriceTableSection';
 import BannerSection from './components/BannerSection';
 import BenefitSection from './components/BenefitSection';
 import FeaturesSection from './components/FeaturesSection';
 import Testimonials from './components/Testimonials';
 import BlogSection from './components/BlogSection';
+import TrustSection from './components/TrustSection';
+import ChatWidget from './components/ChatWidget';
+import CookieConsent from './components/CookieConsent';
 import Footer from './components/Footer';
-import { Product } from './types';
+import { Product, Seller } from './types';
+
+// Mock Sellers
+const seller1: Seller = { id: 101, name: "BookLover.BKK", avatar: "https://i.pravatar.cc/150?u=1", isVerified: true, rating: 4.9, totalSales: 450, joinDate: "Jan 2024" };
+const seller2: Seller = { id: 102, name: "นิยายมือสองสภาพดี", avatar: "https://i.pravatar.cc/150?u=2", isVerified: true, rating: 4.7, totalSales: 120, joinDate: "Mar 2024" };
+const seller3: Seller = { id: 103, name: "MangaCollector", avatar: "https://i.pravatar.cc/150?u=3", isVerified: false, rating: 4.5, totalSales: 85, joinDate: "Jun 2024" };
 
 // Mock Data for Books
 const featuredBooks: Product[] = [
@@ -22,7 +31,8 @@ const featuredBooks: Product[] = [
     price: 850,
     rating: 5,
     image: "https://maternitybaby0.wordpress.com/wp-content/uploads/2025/12/like-my-heart-hardcover-limited-edition.jpg",
-    isNew: false
+    isNew: false,
+    seller: seller1
   },
   {
     id: 2,
@@ -32,7 +42,8 @@ const featuredBooks: Product[] = [
     originalPrice: 6500,
     rating: 5,
     image: "https://maternitybaby0.wordpress.com/wp-content/uploads/2025/12/one-piece-volumes-1-100-complete-set.jpg",
-    isNew: true
+    isNew: true,
+    seller: seller3
   },
   {
     id: 3,
@@ -41,7 +52,8 @@ const featuredBooks: Product[] = [
     price: 250,
     rating: 4,
     image: "https://maternitybaby0.wordpress.com/wp-content/uploads/2025/12/summary-of-high-school-biology-bio-beam.jpg",
-    isNew: false
+    isNew: false,
+    seller: seller2
   },
   {
     id: 4,
@@ -50,7 +62,8 @@ const featuredBooks: Product[] = [
     price: 1200,
     rating: 5,
     image: "https://maternitybaby0.wordpress.com/wp-content/uploads/2025/12/harry-potter-and-the-philosophers-stone-1st-ed.jpeg",
-    isNew: true
+    isNew: true,
+    seller: seller1
   }
 ];
 
@@ -62,7 +75,8 @@ const newArrivals: Product[] = [
     price: 320,
     rating: 4,
     image: "https://maternitybaby0.wordpress.com/wp-content/uploads/2025/12/thinking-fast-and-slow.png",
-    isNew: true
+    isNew: true,
+    seller: seller2
   },
   {
     id: 6,
@@ -72,7 +86,8 @@ const newArrivals: Product[] = [
     originalPrice: 550,
     rating: 5,
     image: "https://maternitybaby0.wordpress.com/wp-content/uploads/2025/12/sapiens-a-brief-history-of-humankind.png",
-    isNew: false
+    isNew: false,
+    seller: seller1
   },
   {
     id: 7,
@@ -81,7 +96,8 @@ const newArrivals: Product[] = [
     price: 950,
     rating: 5,
     image: "https://maternitybaby0.wordpress.com/wp-content/uploads/2025/12/dictionary-oxford-advanced-10th-ed.png",
-    isNew: true
+    isNew: true,
+    seller: seller2
   },
   {
     id: 8,
@@ -90,11 +106,15 @@ const newArrivals: Product[] = [
     price: 1800,
     rating: 5,
     image: "https://maternitybaby0.wordpress.com/wp-content/uploads/2025/12/attack-on-titan-volumes-1-34-complete.jpg",
-    isNew: false
+    isNew: false,
+    seller: seller3
   }
 ];
 
 const App: React.FC = () => {
+  const [selectedProductForChat, setSelectedProductForChat] = useState<Product | null>(null);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -117,19 +137,36 @@ const App: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
+  const handleOpenChat = (product: Product) => {
+    setSelectedProductForChat(product);
+    setIsChatOpen(true);
+  };
+
   return (
     <div className="min-h-screen font-sans text-gray-700 bg-[#fdfdfd]">
       <Header />
       <Hero />
       <div className="reveal"><CategorySection /></div>
       <div className="reveal"><ArticleSection /></div>
-      <div className="reveal"><ProductSection title="หนังสือแนะนำ / ของสะสม" products={featuredBooks} /></div>
-      <div className="reveal"><ProductSection title="หนังสือเข้าใหม่วันนี้" products={newArrivals} bgColor="bg-gray-50" /></div>
+      <div className="reveal">
+        <ProductSection 
+          title="หนังสือแนะนำจากผู้ขายยืนยันตัวตน" 
+          products={featuredBooks} 
+          onChatOpen={handleOpenChat}
+        />
+      </div>
+      <div className="reveal">
+        <ProductSection 
+          title="ลงขายใหม่ล่าสุด" 
+          products={newArrivals} 
+          bgColor="bg-gray-50" 
+          onChatOpen={handleOpenChat}
+        />
+      </div>
+      <div className="reveal"><PriceTableSection /></div>
+      <div className="reveal"><TrustSection /></div>
       <div className="reveal"><BannerSection /></div>
-      
       <div className="reveal"><BenefitSection /></div>
-
-      <div className="reveal"><ProductSection title="สินค้ายอดนิยม (Best Sellers)" products={featuredBooks} /></div>
       <div className="reveal"><FeaturesSection /></div>
       <div className="reveal"><Testimonials /></div>
       
@@ -146,6 +183,16 @@ const App: React.FC = () => {
 
       <div className="reveal"><BlogSection /></div>
       <Footer />
+
+      {/* Chat Component */}
+      <ChatWidget 
+        product={selectedProductForChat} 
+        isOpen={isChatOpen} 
+        onClose={() => setIsChatOpen(false)} 
+      />
+
+      {/* Cookie Consent Banner */}
+      <CookieConsent />
     </div>
   );
 };

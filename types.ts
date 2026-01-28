@@ -1,3 +1,14 @@
+
+export interface Seller {
+  id: number;
+  name: string;
+  avatar: string;
+  isVerified: boolean;
+  rating: number;
+  totalSales: number;
+  joinDate: string;
+}
+
 export interface Product {
   id: number;
   name: string;
@@ -7,6 +18,25 @@ export interface Product {
   rating: number;
   image: string;
   isNew?: boolean;
+  seller?: Seller;
+  description?: string;
+}
+
+export interface Review {
+  id: number;
+  userName: string;
+  userAvatar: string;
+  rating: number;
+  comment: string;
+  date: string;
+}
+
+export interface ChatMessage {
+  id: number;
+  senderId: string;
+  text: string;
+  timestamp: string;
+  isMe: boolean;
 }
 
 export interface Category {
