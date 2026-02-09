@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Instagram, Linkedin, MessageCircle, Phone, Mail } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, MessageCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const SELL_URL = "https://inlnk.co/frtCs";
@@ -31,6 +31,16 @@ const Footer: React.FC = () => {
                 <div className="flex items-center gap-3">
                   <Mail size={18} className="text-primary" />
                   <span>info@rebookstore.com</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <MapPin size={18} className="text-primary mt-1 shrink-0" />
+                  <div className="flex flex-col">
+                    <span className="text-xs font-bold text-gray-400 uppercase">ดำเนินงานโดย</span>
+                    <span className="font-bold text-gray-700">ห้างหุ้นส่วนจำกัด มิสเตอร์บุ๊ค</span>
+                    <span className="font-bold text-gray-700 mb-1">MR.BOOK LIMITED PARTNERSHIP</span>
+                    <span className="text-xs font-bold text-gray-400 uppercase mt-2">ที่ตั้งบริษัท</span>
+                    <span className="leading-relaxed">127,129 ถนนมะกรูด ตำบลสะบารัง อำเภอเมืองปัตตานี จ.ปัตตานี 94000</span>
+                  </div>
                 </div>
                 {/* Line@ Section */}
                 <div className="flex items-center gap-3 group">
@@ -116,9 +126,14 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 REBOOK.MARKET - ซื้อ-ขายหนังสือมือสอง ครบวงจร
-          </p>
+          <div className="flex flex-col mb-4 md:mb-0">
+            <p className="text-gray-400 text-sm">
+              © 2025 ห้างหุ้นส่วนจำกัด มิสเตอร์บุ๊ค (MR.BOOK LIMITED PARTNERSHIP)
+            </p>
+            <p className="text-gray-400 text-[10px] uppercase tracking-widest mt-1">
+              REBOOK.MARKET - ซื้อ-ขายหนังสือมือสอง ครบวงจร
+            </p>
+          </div>
           <div className="flex space-x-4 opacity-50 grayscale">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" className="h-4" />
             <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" className="h-4" />
