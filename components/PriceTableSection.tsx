@@ -166,7 +166,7 @@ const PriceTableSection: React.FC = () => {
               ทีมงานของเราพร้อมให้ราคาที่ดีที่สุดตามความหายากและความนิยม
             </p>
             <a 
-              href="https://inlnk.co/frtCs" 
+              href="https://inlnk.co/dhRMV" 
               className="inline-flex items-center gap-2 md:gap-3 bg-primary text-white font-bold px-8 md:px-12 py-4 md:py-5 rounded-xl md:rounded-2xl hover:bg-white hover:text-gray-900 transition-all transform hover:-translate-y-1 shadow-lg group text-sm md:text-base"
             >
               <span>แชทประเมินราคาทาง Line</span>

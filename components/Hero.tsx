@@ -2,7 +2,8 @@
 import React from 'react';
 
 const Hero: React.FC = () => {
-  const SELL_URL = "https://inlnk.co/frtCs";
+  const SELL_URL = "https://inlnk.co/dhRMV";
+  const LINE_ID = "@887ujsyt";
 
   return (
     <section className="relative w-full h-[500px] md:h-[650px] overflow-hidden bg-gray-100">
@@ -30,8 +31,11 @@ const Hero: React.FC = () => {
             <p className="text-xl md:text-2xl font-light mb-2 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               รับซื้อหนังสือมือสอง ทุกประเภท ให้ราคาสูง ยุติธรรม
             </p>
-            <p className="text-3xl md:text-5xl font-bold mb-8 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+            <p className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
               เริ่มที่เล่มละ <span className="text-light">฿50 บาท</span>
+            </p>
+            <p className="text-lg font-bold mb-8 text-accent animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
+              แอดไลน์เลย: {LINE_ID}
             </p>
             
             <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>

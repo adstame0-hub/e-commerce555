@@ -40,7 +40,7 @@ const posts: BlogPost[] = [
 
 const BlogSection: React.FC = () => {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
-  const SELL_URL = "https://inlnk.co/frtCs";
+  const SELL_URL = "https://inlnk.co/dhRMV";
 
   // Prevent body scroll when modal is open
   useEffect(() => {

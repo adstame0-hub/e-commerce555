@@ -3,7 +3,7 @@ import React from 'react';
 import { Facebook, Instagram, Linkedin, MessageCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const SELL_URL = "https://inlnk.co/frtCs";
+  const SELL_URL = "https://inlnk.co/dhRMV";
   const LINE_ID = "@887ujsyt";
 
   return (

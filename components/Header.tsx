@@ -4,7 +4,8 @@ import { Phone, Mail, Search, Heart, ShoppingBag, Menu, X, User } from 'lucide-r
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const SELL_URL = "https://inlnk.co/frtCs";
+  const SELL_URL = "https://inlnk.co/dhRMV";
+  const LINE_ID = "@887ujsyt";
 
   return (
     <header className="w-full relative z-50">
@@ -22,7 +23,7 @@ const Header: React.FC = () => {
             </div>
           </div>
           <div className="flex items-center space-x-6">
-            <span className="font-medium">รับซื้อหนังสือถึงบ้าน! <a href={SELL_URL} className="underline text-white ml-1">เช็คราคาฟรีทาง Line!</a></span>
+            <span className="font-medium">รับซื้อหนังสือถึงบ้าน! <a href={SELL_URL} className="underline text-white ml-1">เช็คราคาฟรีทาง Line {LINE_ID}</a></span>
             <div className="flex items-center space-x-4">
               <span>TH | EN</span>
               <div className="flex items-center cursor-pointer hover:text-white transition-colors">

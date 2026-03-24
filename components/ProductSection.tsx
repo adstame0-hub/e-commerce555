@@ -11,6 +11,8 @@ interface ProductSectionProps {
 }
 
 const ProductCard: React.FC<{ product: Product; onChatOpen?: (product: Product) => void }> = ({ product, onChatOpen }) => {
+  const SELL_URL = "https://inlnk.co/dhRMV";
+
   return (
     <div className="bg-white group rounded-xl shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 flex flex-col h-full relative">
       {/* Seller Header Info */}
@@ -76,9 +78,12 @@ const ProductCard: React.FC<{ product: Product; onChatOpen?: (product: Product) 
             >
               <MessageCircle size={14} /> แชทเลย
             </button>
-            <button className="bg-primary text-white py-2 px-1 rounded-lg text-xs font-bold hover:bg-secondary transition-all shadow-md">
+            <a 
+              href={SELL_URL}
+              className="bg-primary text-white py-2 px-1 rounded-lg text-xs font-bold hover:bg-secondary transition-all shadow-md flex items-center justify-center"
+            >
               ลงขายหนังสือ
-            </button>
+            </a>
           </div>
         </div>
       </div>

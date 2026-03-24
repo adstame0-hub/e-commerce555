@@ -2,6 +2,8 @@
 import React from 'react';
 
 const BannerSection: React.FC = () => {
+  const SELL_URL = "https://inlnk.co/dhRMV";
+
   return (
     <section className="py-10 bg-white">
       <div className="container mx-auto px-4">
@@ -20,9 +22,12 @@ const BannerSection: React.FC = () => {
                   ขายหนังสือเก่า <br/> ง่ายๆ แค่ <span className="text-อ italic font-bold">แอดไลน์</span>
                 </h3>
                 <p className="text-sm text-gray-300 mb-6">ประเมินราคาไว รับเงินทันที พร้อมบริการรับถึงหน้าบ้านทั่วกรุงเทพฯ</p>
-                <button className="bg-primary hover:bg-secondary text-white text-xs font-bold py-3 px-8 rounded-full uppercase tracking-widest transition-colors">
+                <a 
+                  href={SELL_URL}
+                  className="bg-primary hover:bg-secondary text-white text-xs font-bold py-3 px-8 rounded-full uppercase tracking-widest transition-colors inline-block"
+                >
                   ประเมินราคาเลย
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -41,9 +46,12 @@ const BannerSection: React.FC = () => {
                   ตามหาเล่มหายาก <br/> ในราคา <span className="text-white italic font-bold">มิตรภาพ</span>
                 </h3>
                 <p className="text-sm text-gray-300 mb-6">คลัง หนังสือมือสอง คุณภาพ คัดกรองสภาพดีเยี่ยมเหมือนใหม่</p>
-                <button className="bg-primary hover:bg-secondary text-white text-xs font-bold py-3 px-8 rounded-full uppercase tracking-widest transition-colors">
+                <a 
+                  href={SELL_URL}
+                  className="bg-primary hover:bg-secondary text-white text-xs font-bold py-3 px-8 rounded-full uppercase tracking-widest transition-colors inline-block"
+                >
                   เลือกชมสินค้า
-                </button>
+                </a>
               </div>
             </div>
           </div>
